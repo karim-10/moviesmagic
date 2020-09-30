@@ -1,0 +1,17 @@
+<%- include ('./partials/head.ejs') %>
+
+<body>
+    <%- include ('./partials/nav.ejs') %>
+    <main class="homePage">
+        <% myData.results.forEach(element => { %>
+        <section class="home">
+            <a href="/moviesItem/<%= element.id %> "><img
+                    src="https://image.tmdb.org/t/p/w500<%= element.poster_path %> " alt="">
+                <h2><%= element.title %> </h2>
+            </a>
+        </section>
+        <% }) %>
+    </main>
+</body>
+
+</html>

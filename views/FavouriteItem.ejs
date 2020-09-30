@@ -1,0 +1,41 @@
+<%- include('./partials/head.ejs') %>
+
+<body>
+    <%- include('./partials/nav.ejs') %>
+
+    <section class="details">
+
+        <img src="https://image.tmdb.org/t/p/original<%= FavItem.backdrop_path %>" alt="">
+        <article class="favouriteButton">
+            <a href="/removeFavourite/<%= FavItem.id %> "><img src="/minus.svg" alt=""></a>
+            <h2>remove From Favourite</h2>
+        </article>
+        <article class="vote">
+            <div class="average">
+                <img src="/star.svg" alt="">
+                <p><%= FavItem.vote_average %><span>/10</span></p>
+                <p><%= FavItem.popularity %> </p>
+            </div>
+        </article>
+        <article class="title">
+            <h3><%= FavItem.title %> </h3>
+        </article>
+        <article class="release">
+            <p><%= FavItem.release_date %> </p>
+            <p><%= FavItem.status %> </p>
+        </article>
+        <article class="genres">
+            <% FavItem.genres.forEach(element => { %>
+            <p><%= element.name %> </p>
+            <% }) %>
+        </article>
+        <article class="summary">
+            <h3>Plot Summary</h3>
+            <h5><%= FavItem.overview %> </h5>
+        </article>
+
+    </section>
+
+</body>
+
+</html>

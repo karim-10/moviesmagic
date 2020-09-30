@@ -1,0 +1,39 @@
+<%- include ('./partials/head.ejs') %>
+
+<body>
+    <%- include ('./partials/nav.ejs') %>
+    <section class="details">
+
+        <img src="https://image.tmdb.org/t/p/original<%= myData.backdrop_path %>" alt="">
+        <article class="favouriteButton">
+            <a href="/addToFavourite/<%= myData.id %> "><img src="/plus.svg" alt=""></a>
+            <h2>Add to favourite</h2>
+        </article>
+        <article class="vote">
+            <div class="average">
+                <img src="/star.svg" alt="">
+                <p><%= myData.vote_average %><span>/10</span></p>
+                <p><%= myData.popularity %> </p>
+            </div>
+        </article>
+        <article class="title">
+            <h3><%= myData.title %> </h3>
+        </article>
+        <article class="release">
+            <p><%= myData.release_date %> </p>
+            <p><%= myData.status %> </p>
+        </article>
+        <article class="genres">
+            <% myData.genres.forEach(element => { %>
+            <p><%= element.name %> </p>
+            <% }) %>
+        </article>
+        <article class="summary">
+            <h3>Plot Summary</h3>
+            <h5><%= myData.overview %> </h5>
+        </article>
+
+    </section>
+</body>
+
+</html

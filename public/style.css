@@ -1,0 +1,317 @@
+@import url(https://fonts.googleapis.com/css?family=Cabin:400);
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: rgb(51, 51, 51);
+  font-family: "Poppins", sans-serif;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 5%;
+  background-color: #4f4f4f;
+  color: white;
+}
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5em;
+  text-decoration: none;
+}
+.nav a:hover {
+  opacity: 0.5;
+  transition: 0.5s;
+}
+/*________________________Form style */
+.webdesigntuts-workshop {
+  /* background: #151515; */
+
+  /* text-align: center; */
+}
+.webdesigntuts-workshop:before,
+.webdesigntuts-workshop:after {
+  /* content: ""; */
+  /* display: block; */
+  /* width: 300px; */
+}
+/* .webdesigntuts-workshop:before {
+  background: #444;
+  background: linear-gradient(left, #151515, #444, #151515);
+  top: 192px;
+} */
+
+/* .webdesigntuts-workshop:after {
+  background: #000;
+  background: linear-gradient(left, #151515, #000, #151515);
+  top: 191px;
+} */
+.webdesigntuts-workshop form {
+  background: #111;
+  background: linear-gradient(#1b1b1b, #111);
+  border: 1px solid #000;
+  border-radius: 5px;
+  box-shadow: inset 0 0 0 1px #272727;
+  display: inline-block;
+  font-size: 0px;
+  position: relative;
+  z-index: 1;
+}
+
+.webdesigntuts-workshop input {
+  background: #222;
+  background: linear-gradient(#333, #222);
+  border: 1px solid #444;
+  border-radius: 5px 0 0 5px;
+  box-shadow: 0 2px 0 #000;
+  color: #888;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  display: block;
+  float: left;
+  font-family: "Cabin", helvetica, arial, sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  height: 40px;
+  margin: 0;
+  padding: 0 10px;
+  text-shadow: 0 -1px 0 #000;
+  width: 200px;
+}
+
+.webdesigntuts-workshop input:focus {
+  animation: glow 800ms ease-out infinite alternate;
+  background: #222922;
+  background: linear-gradient(#333933, #222922);
+  border-color: #393;
+  box-shadow: 0 0 5px rgba(0, 255, 0, 0.2), inset 0 0 5px rgba(0, 255, 0, 0.1),
+    0 2px 0 #000;
+  color: #efe;
+  outline: none;
+}
+
+.webdesigntuts-workshop input[type="submit"] {
+  background: #222;
+  background: linear-gradient(#333, #222);
+  box-sizing: border-box;
+  border: 1px solid #444;
+  border-left-color: #000;
+  border-radius: 0 5px 5px 0;
+  box-shadow: 0 2px 0 #000;
+  color: #fff;
+  display: block;
+  float: left;
+  font-family: "Cabin", helvetica, arial, sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  height: 40px;
+  line-height: 40px;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  text-shadow: 0 -1px 0 #000;
+  width: 80px;
+}
+
+.webdesigntuts-workshop input[type="submit"]:hover,
+.webdesigntuts-workshop input[type="submit"]:focus {
+  background: #292929;
+  background: linear-gradient(#393939, #292929);
+  color: #5f5;
+  outline: none;
+}
+
+.webdesigntuts-workshop input[type="submit"]:active {
+  background: #292929;
+  background: linear-gradient(#393939, #292929);
+  box-shadow: 0 1px 0 #000, inset 1px 0 1px #222;
+  top: 1px;
+}
+
+@keyframes glow {
+  0% {
+    border-color: #393;
+    box-shadow: 0 0 5px rgba(0, 255, 0, 0.2), inset 0 0 5px rgba(0, 255, 0, 0.1),
+      0 2px 0 #000;
+  }
+  100% {
+    border-color: #6f6;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.6),
+      inset 0 0 10px rgba(0, 255, 0, 0.4), 0 2px 0 #000;
+  }
+}
+
+/* __________________home seite */
+.homePage {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 50px;
+  row-gap: 50px;
+  margin: 50px 5%;
+}
+.home h2 {
+  font-size: 1.4em;
+  color: white;
+  text-align: center;
+}
+.home img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+.home a {
+  text-decoration: none;
+}
+/* __________________details seite  */
+.details {
+  height: 100vh;
+}
+.details > img {
+  height: 600px;
+  width: 100%;
+  object-fit: cover;
+  border-bottom-left-radius: 50px;
+}
+.favouriteButton {
+  display: flex;
+  align-items: center;
+  padding: 20px 0 20px 50px;
+}
+.favouriteButton > a {
+  margin-right: 20px;
+  background-color: #fff;
+  padding: 10px 10px;
+  border-radius: 50px;
+  line-height: 10px;
+}
+.favouriteButton > a:hover {
+  padding: 12px 12px;
+  border-radius: 50px;
+  line-height: 11px;
+  transition: ease-out 0.5s;
+}
+
+.favouriteButton > h2 {
+  font-size: 2em;
+  font-weight: bold;
+  color: white;
+}
+
+.vote {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  top: 620px;
+  background-color: #fff;
+  width: 150px;
+  height: 100px;
+  text-align: right;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+.vote .average > p:first-child {
+  font-size: 30px;
+  word-spacing: 5px;
+}
+.vote .average > p:last-child {
+  color: gray;
+}
+span {
+  font-size: 20px;
+}
+.title {
+  color: white;
+  font-size: 30px;
+  padding: 30px 0 0px 50px;
+  font-weight: bold;
+}
+.release {
+  display: flex;
+  padding-left: 50px;
+  color: white;
+  font-weight: 100;
+}
+.release p:first-child {
+  padding-right: 20px;
+}
+.genres {
+  display: flex;
+  color: white;
+  padding-left: 50px;
+}
+.genres p {
+  border: 1px solid white;
+  border-radius: 20px;
+  padding: 5px 20px;
+  margin-right: 10px;
+  margin-top: 20px;
+}
+.summary {
+  padding: 20px 0 150px 50px;
+}
+.summary h3 {
+  font-size: 3em;
+  color: white;
+}
+.summary h5 {
+  font-size: 20px;
+  max-width: 1000px;
+  color: white;
+  font-weight: 100;
+  /* font-family: initial; */
+}
+
+/* -______________________-myshow seite */
+#myshow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 50px;
+  row-gap: 50px;
+  margin: 0 5% 100px 5%;
+}
+.myshow {
+  /* background-color: red; */
+  height: 500px;
+}
+.myshow h5 {
+  font-size: 1.4em;
+  color: white;
+  text-align: left;
+}
+.myshow p {
+  max-height: 100px;
+  overflow: scroll;
+  color: white;
+  margin-bottom: 20px;
+}
+.myshow a {
+  color: white;
+  padding: 5px 20px;
+  border: 1px solid white;
+  border-radius: 20px;
+  text-decoration: none;
+}
+.myshow a:hover {
+  background-color: #fff;
+  color: #4f4f4f;
+}
+.myshow img {
+  width: 100%;
+  height: 275px;
+  border-radius: 15px;
+}
+
+body h1 {
+  text-align: center;
+  color: wheat;
+  padding: 25px 0;
+}
